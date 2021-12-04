@@ -1,0 +1,72 @@
+% Metódy inžinierskej práce
+
+\documentclass[12pt,oneside,slovak,a4paper,coursepaper]{article}
+
+\usepackage[slovak]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[IL2]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} 
+\usepackage{hyperref} 
+
+\usepackage{cite}
+%\usepackage{times}
+
+
+\title{Softwarové programovanie pomocou automatickeho rozpoznávania reči.\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Fedor Lehocki, PhD.}}
+
+\author{Roman Kuruc\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{xkurucr[at]stuba.sk}}
+	}
+
+\date{\small 18. september 2021} 
+
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Hlasové programovanie umožňuje inžinierom zmierniť ich fyzické nepohodlie, prípadne . Má 
+to potenciál byť rýchlejšie ako normálne písanie na klávesnici a môže to pomôcť ľuďom 
+s rôznymi postihnutiami. Zatiaľ čo existujú mnohé riešenia na hlasové programovanie, 
+modelovo riadené inžinierstvo musí ešte len využiť tento netradičný, ale vysoko potenciálny 
+prístup do softwarového vývoja. V mojej práci by som sa chcel zamerať na to, čo je to 
+automatické rozpoznávanie reči, ako sa vytvára, aký to má potenciál v softwarovom vývoji 
+a akú to má budúcnosť v softwarovom vývoji. 
+
+\end{abstract}
+
+\newpage
+
+\section{Úvod} \label{úvod} 
+V tomto semestrálnom projekte sa Vám pokúsim vysvetliť históriu, vývoj programov a takisto aj programy, ktoré  v súčastnosti využíajú funkciu automatického rozpoznávania reči. Budem sa to snažiť vysvteliť tak, aby aj človek, ktorý nikdy nepočul o tejto technológii tomu chápal. Aj keď v dnešnej dobe rozpoznávanie reči je uplatnené  v mnohých smeroch, stále sa snažia vývojarí nájsť nové spôsoby vývoja programov. 
+\subsection{Prečo som si vybral tuto tému?}
+Potom čo bola zverejnená rámcová téma na semestrálny projekt z predmetu informáčne vzdelávanie, tak nemal som  vôbec žiadné tušenie, o čom by som mal písať. Dlho som hľadal tému, ktorá by ma zaujala na toĺko, aby som si ju vybral. Po nejakom čase som prišiel k článku – softwarové modelovanie pomocou rozpoznávania reči. Po prečítaní abstraktu a obsahu článku, ktorý bol publikovaný na I EEE xplore, ma zaujala téma natoľko, že, som sa rozhodol vyberať túto tému na moju semestrálnu prácu. 
+    
+\newpage
+\section{Čo je to rozpoznávanie reči?} \label{hlavný content}
+Rozpoznávanie reči nie je žiadena nová vec, ktorá bol vyvinúta v 21. storočí. Prvé systémy s touto technológiou  boli vytvorené v 50. rokoch minulého storočia. Odvtedy boli mnohé pokusy o vytvorenie iných systémoch  ovládanými hlasom, ktoré by asistovali so softwarovým inžinierom vo vytváraním kódov pre programy. Výhodou takýchto systémov je rýchlosť a presnosť. V priemere človek píše priblížne 60-70 slov za minútu, zatiaľ čo programy s týmito funkciami dokážu písať v priemere 107 slov za minútu. Tradičný spôsob klávesníca a myš je oveľa pomalší. Tak isto je oveĺa väčší počet chýb u užívateľov, ktorý píšu na klávesnici. Často krát písanie na klávesnici vyžaduje pohyb rúk z jednej strany na druhu, aby sme boli schopní   zadať špeciálne znaky, čo značne spomaľuje naše písanie. Ako som už spomenul, písanie pomocou rozpoznávania reči má výhodu  v rýchlosti, ale aj v tom, že dokáže pomôcť ľuďom s fyzickým postihnutím. Tak isto dokáže zmierniť bolesť pre ľudí, ktorí trpia fyzickou bolesťou spôsobenou repetitívnou činnosťou, ako je napríklad syndróm karpálneho tunela. 
+\cite{6014631}
+
+\subsection{Programy využívajúce VDSM} \label{podcontent} 
+V dnešnej sú rôzne programy, ktoré využívajú VDSM, prostredníctvom ktorého dokážeme vytvárať programové kódy pomocou programov ako je napríklad NatLink, SPEED, voicecode.io, Vocola alebo Aenae. Teraz vám vysvetlím, aká je funkcia každého programu. Natlink je hlasovo riadené pythonové prostredie vytvorené Joelom Gould. Toto je základných projektov, ktoré je rozšírením pre VoiceCode, Vocola a ďalších iných. Aenae je projekt, ktorý rozširuje NatLink, aby mohol fungovať ako prostredie pre klientovi server. Tieto prostredia sú častokrát využívané vývojármi, ktorí zoberú verbálne generované príkazy a premenia ich naprieč prepojeniami, ako keby boli písané na klávesnici. Jedným z ďalších projektov je SPEED, program vytvorený Adrewom Begel z Harmonia Research na Unviersity of Califronia at Berkeley. Tento systém využíva verbálne rozhranie na vytvorenie hovoreného Java kódu, ktorý je podobný štandardnému Java jazyku a môže byť skompilovaný vo väčšine štandardných Java kompilátoroch. Dodnes je Vocola je jedna z najpopulárnejších pomôcok v VDSM. Má rovnaké vlastnosti ako SPEED a VoiceCode. Jedným z posledných programoch je  VoiceCode, vytvorený Benom Meyerom. Voicecode dokáže zmapovať rôzne špecifické verbálne frázy do textových strun, makier a akcii, ktoré mu dovolili reťazenie a hniezdenie príkazov. Tieto preddefinované  makrá dovoľujú explicitne integráciu s deviatimi  rôznymi kódovými editormi a teoretický integrácia s akýmikoľvek inými editormi. Teda potom užívateľ je schopný vytvoriť a testovať vhodné makrá. Posledným programom je ModelByVoice. Tento nástroj je určený špeciálne pre zrakovo  postihnutým pri modelovacích aktivitách.  Snaží  sa nahradiť už existujúce softvérové modelovacie nástroje je ako Simulink. Je určený hlavne na odstránenie všetkých grafických a textových požiadaviek z modelovacieho prostredia. ModelByVoice funguje tak, že využíva Google Cloud Speech-to-Text, ktorý prijme vystup od používateľa a vďaka FreeTTS vytvorí počúvateľný text ako výstup.
+\cite{6014631}
+
+\subsection{Hidden Markov Model - HMM}
+Hidden Markov Model (HMM) je štatistická metodika pre automatické rozpoznávanie reči. Táto metóda bola testovaná  vo veľkom spektre aplikácií. Na druhú stranu Prediction by Partial Matching (PPM) je technika štatistického modelovania s konečným kontextom. Táto technika dokáže predpovedať ďalšie znaky na základe kontextu a dokázala, že má skvelí potenciál vo vývoji nových riešení pre rôzne jazykové modeli v rozpoznávaní reči. Zatiaľ čo  HMM sa sústredí na globálné štatistické funkcie v reči, PMM zdôrazňuje čiastočnú predikciu kontextu  pre vylepšenie rozpoznávania. Metóda PMM môže byť ďalej vylepšená začlenením neurčitej zhody do procesu párovania.  
+\cite{5656855}
+
+
+
+\section{Záver} \label{zaver} 
+Cieľom tohoto članku bolo objasnenie témy, ktorú som si vybral. To, či sa mi to podarilo, je už na osobnom zvážení každého čítateľa. Ako som už spomenul v úvode, dúfam, že táto technológia sa bude v budúcnosti ďalej  vyvíjať a čoraz viac sa budeme s ňou stretávať v obyčajnom živote.
+
+
+
+
+\newpage
+\bibliography{literatura.bib}
+\bibliographystyle{plain}
+\end{document}
